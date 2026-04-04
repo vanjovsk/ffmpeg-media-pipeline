@@ -205,3 +205,28 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+
+
+
+
+############
+
+# --- Media Files (Never upload raw footage!) ---
+*.mov
+*.mp4
+*.mxf
+*.wav
+*.mkv
+/proxies/
+/temp/
+
+# --- AWS & Environment Secrets ---
+.env
+.aws/
+credentials.json
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
