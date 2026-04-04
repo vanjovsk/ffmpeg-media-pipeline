@@ -1,78 +1,54 @@
-# Cloud-Integrated-Media-Proxy-Engine
-Cloud-Integrated Media Proxy Engine
+## 🎬 Cloud-Integrated Media Proxy Engine
 
-Here I managed the environment setup and dependencies by myself.
+This toolkit bridges the gap between high-end film editorial workflows and cloud-native technical infrastructure. I designed this to automate the "ingest" phase of post-production, optimizing media for rapid review.
 
+## 🚀 Engineering Highlights
+* **Hardware Accelerated:** Custom FFmpeg configuration utilizing `h264_videotoolbox` for Apple Silicon (M1/M2/M3) acceleration.
+* **Metadata Burn-in:** Automated Python logic to overlay source filenames, crucial for VFX and conform tracking.
+* **Environment Architecture:** Built from the ground up using Homebrew for dependency management.
 
-🚀 Features
+---
 
-Hardware Accelerated: Optimized for Apple Silicon using h264_videotoolbox.
+## 🛠️ Environment Setup & Installation
 
-Automated Overlays: Dynamic filename burn-in for easy review identification.
+A professional media pipeline starts with a clean environment. 
 
-Cloud-Ready: Lightweight output suitable for S3/Frame.io uploads.
-
-
-
-"Install FFmpeg via Homebrew"
-
-Open terminal and paste the code for homebrew install: 
-
-homebrew:
+### 1. Dependency Management (Homebrew)
+Install the Homebrew package manager:
+\`\`\`bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+\`\`\`
 
-use administrator password>press enter/return to continue 
-
-copy and paste this command to make possible find the command:
-
+Configure the Shell Environment (ZSH):
+\`\`\`bash
 echo >> /Users/vanja/.zprofile
 echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> /Users/vanja/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+\`\`\`
 
-ckeck the version:
-brew --version
-
-open terminal and instal FFMPEG:
+### 2. Media Engine (FFmpeg)
+Install the FFmpeg binary:
+\`\`\`bash
 brew install ffmpeg
+\`\`\`
 
 
-#############################
-IN VS code:
 
-Step 1: Create the Project Folder
-create a fresh space for your automation tools. Run these in your terminal:
-
-cd ~
-mkdir media-automation-toolkit
-cd media-automation-toolkit
-
-step 2: Initialize Git (The "Memory")
-tell your computer to start tracking this folder. This creates that hidden .git folder
-
-git init
-
-(You should see a message saying: "Initialized empty Git repository.")
-
-Step 3: Move Your Files
-Now, move your new Python files (ingest_tools.py and requirements.txt) into this new media-automation-toolkit folder.
-
-Run these commands one by one in your VS Code terminal. (Make sure you have created the repository on GitHub.com first!)
-
-# 1. Prepare the files
-git add .
-
-# 2. Save the milestone
-git commit -m "feat: initial ffmpeg proxy engine with hardware acceleration"
-
-# 3. Ensure we are on the 'main' branch
-git branch -M main
-
-# 4. Link to YOUR GitHub (Replace 'githubname' with your actual GitHub username if different)
-git remote add origin https://github.com/githubame/media-automation-toolkit.git
-
-# 5. Push to the cloud!
-git push -u origin main
-
-generating a "Review Proxy" with a burned-in filename.
+### 📂 Project Architecture
+To maintain a clean repository structure:
+1. **Initialize Git:** \`git init\`
+2. **Stage Assets:** \`git add .\`
+3. **Commit:** \`git commit -m "feat: initial ffmpeg proxy engine"\`
+4. **Deploy:** \`git push -u origin main\`
 
 
+
+
+💻 Technical Stack
+Language: Python 3.12
+
+Engine: FFmpeg 8.1
+
+VCS: Git / GitHub
+
+Target: Cloud-Native Ingest Pipelines
