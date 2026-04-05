@@ -52,3 +52,27 @@ Engine: FFmpeg 8.1
 VCS: Git / GitHub
 
 Target: Cloud-Native Ingest Pipelines
+
+# 🎬 Media Automation Toolkit (V1)
+**Assistant Editor & Cloud Pipeline Automation**
+
+This toolkit is a Python-based utility designed to streamline the ingest process for film and video post-production. It automates proxy generation with custom burn-ins and prepares files for cloud or local review.
+
+## 🚀 Features
+* **FFmpeg Integration:** Automated H.264 proxy generation (720p).
+* **Dynamic Burn-ins:** Automatic filename and "PROXY" label overlays for easy identification.
+* **Modular Destinations:** Toggleable logic for Local Desktop ingest or Frame.io Cloud upload.
+* **Environment Safety:** Uses `.env` for secure API token management.
+
+## 🛠️ Tech Stack
+* **Language:** Python 3.13
+* **Libraries:** `ffmpeg-python`, `requests`, `python-dotenv`
+* **External Tools:** FFmpeg, Frame.io V4 API
+
+## 📖 The "403 Forbidden" Case Study
+*During development, I successfully navigated Frame.io's V4 API transition. While the Free Tier currently restricts API uploads (403 Forbidden), the codebase is architected to be "Cloud-Ready" for Enterprise/Team workspaces.*
+
+## 🏁 How to Run
+1. Add your raw media to the `/Images` folder.
+2. Run `python3 final_toolkit_v1.py`.
+3. Check your `VANJA_REVIEW_FOLDER` on the Desktop!
